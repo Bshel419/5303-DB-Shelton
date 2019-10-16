@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     print(bbox)
 
-    lats,lons = get_volcanoes()
+    lats,lons = get_airports()
 
     fig = go.Figure(go.Scattermapbox(
             lat=lats,
@@ -61,8 +61,7 @@ if __name__ == '__main__':
                 lon=bbox['lon']
             ),
             pitch=0,
-            zoom=3
-            
+            zoom=3   
         )
     )
 

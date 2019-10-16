@@ -71,8 +71,8 @@ def get_airports():
     lats = []
     lons = []
     for obj in airports.find():
-        lat = float(obj['-6']['081689834590001'])
-        lon = float(obj['145']['391998291'])
+        lat = float(obj["latitude"])
+        lon = float(obj["longitude"])
             #if within_bbox(bbox,lat,lon):
         lats.append(lat)
         lons.append(lon)
