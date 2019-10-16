@@ -1,3 +1,4 @@
+#Code given to us by Dr. Griffin
 import pymongo
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -65,7 +66,7 @@ def get_bbox(points):
 def within_bbox(bbox,lat,lon):
     return (lat < bbox['max_lat'] and lat > bbox['min_lat'] and lon < bbox['max_lon'] and lon > bbox['min_lon'])
 
-
+#Took the get_meteorites() function and edited it for each collection
 def get_airports():
     airports = db["airports"]
     lats = []
@@ -106,6 +107,7 @@ def get_meteorites():
             lons.append(lon)
     return (lats,lons)
 
+#The ufo data was a little wonky so I had to add in a filter, because my filter_bad_cases wouldn't work properly
 def get_ufos():
     ufos = db["ufos"]
     lats = []
