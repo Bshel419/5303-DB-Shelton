@@ -117,4 +117,4 @@ layout = go.Layout(autosize=True,
     title = "Arm2")
 
 fig = dict(data=worst+secondWorst+thirdWorst, layout=layout)
-plotly.offline.plot(fig, filename='arm2.html')
+plotly.offline.plot(fig, filename='Arm2.html')
